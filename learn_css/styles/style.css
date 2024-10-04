@@ -1,0 +1,81 @@
+body {
+  padding: 2rem;
+  display: flex;
+  height: 89vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+
+/* the animation  box */
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  /* animation #1 way */
+  /* 
+  animation-name: spin;  this name belongs to keyframe name  
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running; */
+
+  /* animation #2 way */
+  animation: 3s spin ease-in-out 1s infinite alternate;
+}
+
+/* the keyframe used for configure the animation and named spin */
+@keyframes spin {
+  0% {
+  }
+
+  50% {
+    transform: rotate(360deg);
+    border-radius: 100px;
+    scale: 2;
+    background-color: springgreen;
+  }
+
+  100% {
+    transform: rotate(0);
+    border-radius: 0%;
+
+    scale: 1;
+  }
+}
+
+/* button box  */
+.action-box {
+  width: "100%";
+  height: 200px;
+}
+.play_btn {
+  width: 100px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.pause_btn {
+  width: 100px;
+  height: 40px;
+  background-color: red;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
